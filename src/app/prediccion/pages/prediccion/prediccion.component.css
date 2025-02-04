@@ -1,0 +1,107 @@
+.row > div {
+  /*margin: 5px;*/
+  background-color: rgb(221, 221, 221);
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  /*transition: all 0.3s ease-in-out;*/
+}
+
+.col > div {
+  /*margin: 5px;*/
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  /*transition: all 0.3s ease-in-out;*/
+}
+
+.id3C {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  height: 100%; /* O ajusta la altura según lo necesites */
+  background-color: rgb(221, 221, 221);
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.img-fluid {
+  max-width: 60%; /* Tamaño de la imagen */
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  /* Cuando la pantalla tenga un ancho máximo de 768px, se cambia el orden */
+  .content {
+    flex-direction: column; /* Cambia a columna, lo que pone la tabla debajo de la imagen */
+    align-items: center; /* Centra la imagen y la tabla */
+  }
+
+  .img-fluid {
+    max-width: 80%; /* Ajusta el tamaño de la imagen cuando la pantalla es pequeña */
+  }
+}
+
+
+
+/*.row > div:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}*/
+
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h3 {
+  color: #4CAF50;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.grafica-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.grafica-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.texto-alerta {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f44336;
+}
+.img-altavoz {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: auto;
+} */

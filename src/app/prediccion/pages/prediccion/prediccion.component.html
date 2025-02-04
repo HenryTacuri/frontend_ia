@@ -1,0 +1,144 @@
+<div class="container">
+  <h3 class="text-center">{{prediccion!.Revenue > 0 ? 'Compra realizada' : 'Compra no realizada'}}</h3>
+  <div class="row row-cols-2">
+    <div class="col">
+      <h5 class="text-center">Datos de la predicción</h5>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Variable</th>
+            <th scope="col">Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Product Related</th>
+            <td> {{prediccion?.ProductRelated}} </td>
+          </tr>
+          <tr>
+            <th scope="row">Product Related Duration</th>
+            <td> {{prediccion?.ProductRelated_Duration}} </td>
+          </tr>
+          <tr>
+            <th scope="row">Bounce Rates</th>
+            <td> {{prediccion?.BounceRates}} </td>
+          </tr>
+          <tr>
+            <th scope="row">Exit Rates</th>
+            <td>{{prediccion?.ExitRates}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Page Values</th>
+            <td> {{prediccion?.PageValues}} </td>
+          </tr>
+          <tr>
+            <th scope="row">Month</th>
+            <td> {{prediccion?.Month}} </td>
+          </tr>
+          <tr>
+            <th scope="row">Region</th>
+            <td> {{prediccion?.Region}} </td>
+          </tr>
+          <tr>
+            <th scope="row">Visitor Type</th>
+            <td>{{prediccion?.VisitorType}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Weekend</th>
+            <td>{{prediccion?.Weekend === 0 ? 'No' : 'Si'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <h5 class="text-center">Explicación de los resultados</h5>
+      <div class="container" style="max-height: 200px; overflow-y: auto;">
+        <p> {{explicacionResultados}} </p>
+      </div>
+      <button (click)="expliacionResultadosIA()" class="btn btn-primary btn-sm m-2">
+        Explicar
+      </button>
+
+      <button (click)="reproducirAudio()" class="btn btn-primary btn-sm m-3">
+        <img src="altavoz.png" alt="Alerta" class="img-altavoz" class="img-fluid" width="25px" height="25px">
+      </button>
+
+      <button (click)="stopAutio()" class="btn btn-primary btn-sm m-3">
+        <img src="sonido2.png" alt="Alerta" class="img-altavoz" class="img-fluid" width="25px" height="25px">
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="id3C">
+    <h5 class="text-center">Variables más importantes</h5>
+    <div class="content">
+        <img src="grafica_predicciones.png" alt="Gráfica de Predicciones" class="img-fluid">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Variable</th>
+                    <th scope="col">Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Product Related</th>
+                    <td> Número de páginas relacionadas con productos visitadas por el usuario. </td>
+                </tr>
+                <tr>
+                    <th scope="row">Product Related Duration</th>
+                    <td> Tiempo invertido en la categoría de páginas. </td>
+                </tr>
+                <tr>
+                    <th scope="row">Bounce Rates</th>
+                    <td> Porcentaje de visitantes que salen sin interactuar en la página. </td>
+                </tr>
+                <tr>
+                    <th scope="row">Exit Rates</th>
+                    <td> Porcentaje de vistas que terminan en esta página. </td>
+                </tr>
+                <tr>
+                    <th scope="row">Page Values</th>
+                    <td> Valor promedio de la página basado en la página objetivo y/o finalización de transacción. </td>
+                </tr>
+                <tr>
+                    <th scope="row">Month</th>
+                    <td> Mes en que se visitó la página. </td>
+                </tr>
+                <tr>
+                    <th scope="row">Region</th>
+                    <td> Región del usuario. </td>
+                </tr>
+                <tr>
+                    <th scope="row">Visitor Type</th>
+                    <td> Tipo de visitante. </td>
+                </tr>
+                <tr>
+                    <th scope="row">Weekend</th>
+                    <td> La sesión de la visita fue en fin de semana. </td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+
+</div>
+
+<!-- <div class="container">
+  <h3>{{prediccion!.Revenue > 0 ? 'Compra realizada' : 'Compra no realizada'}}</h3>
+
+  <div class="grafica-container">
+    <img src="grafica_predicciones.png" alt="Gráfica de Predicciones">
+  </div>
+
+  <p class="texto-alerta">El resultado de la predicción indica que el usuario no realizó una compra (Revenue = 0). Esto se debe a que, aunque el usuario visitó varias páginas de productos (ProductRelated = 1), pasó muy poco tiempo en ellas (ProductRelated_Duration = 0), lo que sugiere poco interés. Además, el porcentaje de visitantes que salieron sin interactuar (BounceRates) y el porcentaje de vistas que terminaron en esa página (ExitRates) son relativamente altos (0.20), lo que podría indicar que el usuario no encontró lo que buscaba. También, el usuario no realizó la visita en fin de semana (Weekend = 0) y su comportamiento como visitante recurrente no fue suficiente para impulsar la compra.</p>
+
+  <div class="grafica-container">
+    <button (click)="reproducirAudio()">
+      <img src="altavoz.png" alt="Alerta" class="img-altavoz">
+    </button>
+  </div>
+</div>
+ -->

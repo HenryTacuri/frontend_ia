@@ -1,0 +1,152 @@
+<h2>Formulario</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" autocomplete="off">
+
+      <!-- Nombre -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Product Related</label>
+        <div class="col-sm-9">
+          <input
+          type="number"
+          class="form-control"
+          placeholder="Número de páginas relacionadas con productos visitadas por el usuario."
+          formControlName="ProductRelated">
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Product Related Duration</label>
+        <div class="col-sm-9">
+          <input
+          type="number"
+          class="form-control"
+          placeholder="Tiempo invertido en la categoría de páginas."
+          formControlName="ProductRelated_Duration">
+        </div>
+      </div>
+
+      <!-- Username -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Bounce Rates</label>
+        <div class="col-sm-9">
+          <input
+          type="number"
+          class="form-control"
+          placeholder="Porcentaje de visitantes que salen sin interactuar en la página."
+          formControlName="BounceRates">
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Exit Rates</label>
+        <div class="col-sm-9">
+          <input
+          type="number"
+          class="form-control"
+          placeholder="Porcentaje de vistas que terminan en esta página."
+          formControlName="ExitRates">
+        </div>
+      </div>
+
+      <!-- Password2 -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Page Values</label>
+        <div class="col-sm-9">
+          <input
+          type="number"
+          class="form-control"
+          placeholder="Valor promedio de la página basado en la página objetivo y/o finalización de transacción."
+          formControlName="PageValues">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Month</label>
+        <div class="col-sm-9">
+          <select
+            class="form-control"
+            formControlName="Month">
+            <option value="">Mes en que se visito la página</option>
+            <option value="Jan">Enero</option>
+            <option value="Feb">Febrero</option>
+            <option value="Mar">Marzo</option>
+            <option value="Apr">Abril</option>
+            <option value="May">Mayo</option>
+            <option value="June">Junio</option>
+            <option value="Jul">Julio</option>
+            <option value="Aug">Agosto</option>
+            <option value="Sep">Septiembre</option>
+            <option value="Oct">Octubre</option>
+            <option value="Nov">Noviembre</option>
+            <option value="Dec">Diciembre</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Region</label>
+        <div class="col-sm-9">
+          <select
+            class="form-control"
+            formControlName="Region">
+            <option value="">Region del usuario</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Visitor Type</label>
+        <div class="col-sm-9">
+          <select
+            class="form-control"
+            formControlName="VisitorType">
+            <option value="">Tipo de visitante</option>
+            <option value="New_Visitor">Nuevo Visitante</option>
+            <option value="Returning_Visitor">Visitante habitual</option>
+            <option value="Other">Otro</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Weekend</label>
+        <div class="col-sm-9">
+          <select
+            class="form-control"
+            formControlName="Weekend">
+            <option value="">La sesión de la visita fue en fin de semana</option>
+            <option value="1">Si</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary float-end" type="submit">
+            Predecir
+          </button>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+</div>
+
+
